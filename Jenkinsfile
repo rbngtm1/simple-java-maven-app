@@ -13,6 +13,6 @@ node('mavenbuilds'){
     sh "${mvnHome}/bin/mvn clean package"
         }
     stage('post build action'){
-    echo "sending an email to user"
+    echo "sending an email to users"
 }
 }

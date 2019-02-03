@@ -12,7 +12,7 @@ node('mavenbuilds'){
     echo "building the job now"
     sh "${mvnHome}/bin/mvn clean package"
         }
-    stage('post build action')
+    stage('post build action'){
     echo "sending an email to user"
 }
 }

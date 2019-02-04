@@ -9,4 +9,9 @@ node('mavenbuilds'){
         echo "executing test cases"
         sh "${mvnHome}/bin/mvn clean test"
     }
+    stage('build'){
+        echo "building the job now"
+        sh "${"mvnHome}/bin/mvn clean package"
+    }
+
 }

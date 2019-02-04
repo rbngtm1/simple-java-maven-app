@@ -7,7 +7,7 @@ node('mavenbuilds'){
     }
     stage('build'){
         echo "building the job now"
-        sh "${mvnHome}/bin clean package"
+        sh "${mvnHome}/bin/mvn clean package"
 
     }
 }

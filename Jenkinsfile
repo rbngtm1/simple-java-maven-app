@@ -8,12 +8,13 @@ node('mavenbuilds'){
         echo "test case is started"
         sh "${mvnHome}/bin/mvn clean test"
         archiveArtifacts allowEmptyArchive: true, artifacts: 'target/surefire-reports/*.xml'
+        
     }
     stage('build'){
     echo "building the job now"
     sh "${mvnHome}/bin/mvn clean package"
         }
     stage('post build action'){
-    echo "sending an email to users"
+    echo "sending an email to user"
 }
 }

@@ -1,5 +1,8 @@
 node('mavenbuilds'){
-    def mvnHome = tool name: 'maven-360', type: 'maven'
+    def mvnHome
+    def version
+    mvnHome=tool 'maven-3.6.3'
+    version='3.6.3'
     stage('checkout'){
         echo "downloading the source code"
         git credentialsId: 'githubaccount', url: 'https://github.com/ramharig/simple-java-maven-app.git'
